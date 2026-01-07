@@ -1,0 +1,23 @@
+Example 1:
+
+Input: s = "abcd", t = "abcde"
+Output: "e"
+Explanation: 'e' is the letter that was added.
+Example 2:
+
+Input: s = "", t = "y"
+Output: "y"
+---------------------------------------------------------
+class Solution:
+    def findTheDifference(self, s: str, t: str) -> str:
+        lii=[]
+        sum1=0
+        sum2=0
+        for ch in s:
+            sum1+=ord(ch)
+        for ch in t:
+            sum2+=ord(ch)
+        return chr(abs(sum1-sum2))
+        
+        
+            
